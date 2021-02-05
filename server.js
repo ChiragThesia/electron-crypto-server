@@ -29,9 +29,7 @@ server.use('/crypto', cryptoRouter);
 server.use('/rss', rssRouter);
 
 server.listen(PORT, () => {
-	console.log(
-		`🚀 Server is running on ${process.env.NODE_ENV} mode at: http://localhost:${PORT}`
-	);
+	console.log(`🚀 Server is running at: http://localhost:${PORT}`);
 });
 
 module.exports = server;

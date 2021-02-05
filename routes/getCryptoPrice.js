@@ -6,7 +6,7 @@ const rp = require('request-promise');
 const requestOptions = {
 	method: 'GET',
 	headers: {
-		'X-CMC_PRO_API_KEY': '809270be-d7ec-4f2a-8790-4af9ae7bc059'
+		'X-CMC_PRO_API_KEY': process.env.CRYPTO_PRICE
 	},
 	json: true
 };

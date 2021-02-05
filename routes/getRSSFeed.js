@@ -16,7 +16,6 @@ router.get('/rssFeed', async (req, res, next) => {
 			return newLinks;
 		});
 		const rssArray = await Promise.all(rssLinks).then((linkArray) => {
-			// const linkData =
 			return linkArray;
 		});
 
