@@ -22,10 +22,10 @@ router.get('/rssFeed', async (req, res, next) => {
 
 		const linkData = rssArray.map((data) => {
 			const tweetData = data.items.map((tweet) => {
-				const { creator, title, link, pubDate, contentSnippet } = tweet;
+				const { creator, title, link, pubDate } = tweet;
 				const tweets = {
 					name: creator,
-					content: contentSnippet,
+					content: title,
 					url: link,
 					publicationDate: pubDate
 				};
@@ -33,8 +33,6 @@ router.get('/rssFeed', async (req, res, next) => {
 			});
 			return tweetData;
 		});
-		console.log('LINKData', linkData);
-
 		res.status(200).send(linkData);
 	} catch (error) {
 		next(error);

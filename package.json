@@ -1,10 +1,14 @@
 {
   "name": "electron-crypto-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crytpo & RSS server for an app",
   "main": "server.js",
+  "engines": {
+    "node": "12.11.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
     "server": "nodemon server.js"
   },
   "repository": {
